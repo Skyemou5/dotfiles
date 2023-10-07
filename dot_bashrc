@@ -136,10 +136,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#path extension
-export PATH="$HOME/Apps:$PATH"
-export PATH=$PATH:/usr/local/go/bin
-export PATH="/home/mara/.local/bin:$PATH"
+#path extensions
+PATH="$HOME/Apps:$PATH"
+PATH="$HOME/.local/bin:$PATH"
+PATH="/usr/local/go/bin:$PATH"
+
+export PATH
 
 #environment variables
 export PAGER='/usr/bin/less'
