@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#get selected file paths
+#'t' allows array not consume newlines, but rather separate on them
+readarray -t file_arr <<< "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS"
+
+#open user input window, collect comma-separated tags
+tags=$(zenity --entry --title="Get TMSU Tag(s)" \
+--text="Enter TMSU tags, separated by spaces:" \
+--entry-text="tags here")
+
+#tags=$(echo "$tags" | sd "," " ")
+
+#for each selected file, apply all tags
+for curr_file in "${file_arr[@]}"; do
+	tmsu tag "$curr_file" $tags
+done
+
+exit 0
