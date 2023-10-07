@@ -212,7 +212,7 @@ source /usr/share/fzf/shell/key-bindings.bash
 #source /usr/share/autojump/autojump.bash
 #source /home/mara/.completions/*
 source ~/.local/share/bash-completion/completions/*
-source /home/mara/.config/sources/fzf-git.sh
+source ~/.config/sources/fzf-git.sh
 
 #fff
 f() {
@@ -233,8 +233,10 @@ export MANROFFOPT="-c"
 
 export FZF_DEFAULT_OPTS="
 -m --height 100%
---bind 'ctrl-y:execute-silent(printf {} | cut -f 2- | xclip -r -sel c)'
 --preview 'bat -n --color=always {}'
+--preview-window hidden
+--bind 'ctrl-y:execute-silent(printf {} | cut -f 2- | xclip -r -sel c)'
+--bind 'ctrl-p:toggle-preview'
 "
 
 # Preview file content using bat (https://github.com/sharkdp/bat)
