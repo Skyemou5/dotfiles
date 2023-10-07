@@ -185,6 +185,7 @@ alias nnn='nnn -Hx'
 alias toss='trash-put'
 alias less='less -N'
 alias dust='dust -r'
+alias lsfuse='duf -all -only-fs fuse.pathfs.pathInode'
 
 #arbitrary functions
 function surface()
