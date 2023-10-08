@@ -242,6 +242,7 @@ export FZF_DEFAULT_OPTS="
 --preview-window hidden
 --bind 'ctrl-y:execute-silent(printf {} | cut -f 2- | xclip -r -sel c)'
 --bind 'ctrl-p:toggle-preview'
+--bind 'alt-l:clear-query'
 "
 
 # Preview file content using bat (https://github.com/sharkdp/bat)
