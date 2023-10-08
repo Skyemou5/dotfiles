@@ -207,6 +207,11 @@ function surface()
 	exit 0
 }
 
+function extract-sentences()
+{
+	sd "\. " ".\n"
+}
+
 #sources
 source /usr/share/fzf/shell/key-bindings.bash
 #source /usr/share/autojump/autojump.bash
