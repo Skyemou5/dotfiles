@@ -1,0 +1,9 @@
+--hide-hidden
+
+--show-itemcount
+
+#--show-graph
+
+#--show-percent
+
+#--sort=disk-usage-desc

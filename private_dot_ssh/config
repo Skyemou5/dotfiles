@@ -1,0 +1,27 @@
+Host github.com
+	ForwardX11 no
+	
+Host pixel
+	HostName 10.0.0.65
+	Port 2222
+	User androidmeta
+	PubkeyAcceptedAlgorithms ssh-rsa
+	HostkeyAlgorithms ssh-rsa
+
+Host steamdeck
+	HostName 10.0.0.30
+	User deck
+	
+Host laptop
+	HostName 10.0.0.235
+	#Port 2222
+	User lwmarka
+	PubkeyAcceptedAlgorithms rsa-sha2-512
+	HostkeyAlgorithms rsa-sha2-512
+	
+Host alienware
+	HostName 10.0.0.66
+	Port 22
+	User marka
+	#PubkeyAcceptedAlgorithms rsa-sha2-512
+	#HostkeyAlgorithms rsa-sha2-512
