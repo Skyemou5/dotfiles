@@ -208,8 +208,13 @@ function surface()
 }
 
 function extract-sentences()
-{
+{ 
 	sd "\. " ".\n"
+}
+
+function manswitch()
+{ 
+	man $1 | less -p "^ +$2"
 }
 
 #sources
