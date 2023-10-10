@@ -7,5 +7,5 @@ fi
 
 # User specific environment and startup programs
 
-source /home/mara/.config/broot/launcher/bash/br
+source $HOME/.config/broot/launcher/bash/br
 . "$HOME/.cargo/env"
