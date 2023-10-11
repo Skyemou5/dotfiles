@@ -193,6 +193,8 @@ alias toss='trash-put'
 alias less='less -N'
 alias dust='dust -r'
 alias lsfuse='duf -all -only-fs fuse.pathfs.pathInode'
+alias howdoi='howdoi --color'
+alias tldr='tldr -t ocean'
 
 #arbitrary functions
 function surface()
@@ -248,6 +250,8 @@ export FZF_DEFAULT_OPTS="
 --bind 'ctrl-y:execute-silent(printf {} | cut -f 2- | xclip -r -sel c)'
 --bind 'ctrl-p:toggle-preview'
 --bind 'alt-l:clear-query'
+--bind 'alt-c:clear-selection'
+--bind 'alt-a:toggle-all'
 "
 
 # Preview file content using bat (https://github.com/sharkdp/bat)
@@ -382,3 +386,9 @@ source "$HOME/.cargo/env"
 
 # Bind up-arrow but not ctrl-r
 eval "$(atuin init bash --disable-ctrl-r)"
+
+# Bind ctrl-g to navi as a widget
+eval "$(navi widget bash)"
+
+#cheat
+export CHEAT_USE_FZF=true
