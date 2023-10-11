@@ -1,13 +1,13 @@
 format = """
-[](#9A348E)\
+[](#5e14a3)\
 $os\
 $username\
-[](bg:#DA627D fg:#9A348E)\
+[](fg:#5e14a3 bg:#de3359)\
 $directory\
-[](fg:#DA627D bg:#FCA17D)\
+[](fg:#de3359 bg:#db7144)\
 $git_branch\
 $git_status\
-[](fg:#FCA17D bg:#86BBD8)\
+[](fg:#db7144 bg:#5eafdb)\
 $c\
 $elixir\
 $elm\
@@ -20,7 +20,7 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](fg:#86BBD8 bg:#06969A)\
+[](fg:#5eafdb bg:#06969A)\
 $docker_context\
 [](fg:#06969A bg:#33658A)\
 $time\
@@ -34,7 +34,7 @@ $time\
 # and use the os module below
 [username]
 show_always = true
-style_user = "bg:#9A348E"
+style_user = "bg:#5e14a3"
 style_root = "bg:#9A348E"
 format = '[$user ]($style)'
 disabled = false
@@ -46,7 +46,7 @@ style = "bg:#9A348E"
 disabled = true # Disabled by default
 
 [directory]
-style = "bg:#DA627D"
+style = "bg:#de3359"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -86,11 +86,11 @@ format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
 symbol = ""
-style = "bg:#FCA17D"
+style = "bg:#db7144"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#FCA17D"
+style = "bg:#db7144"
 format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
@@ -119,7 +119,7 @@ format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#86BBD8"
+style = "bg:#5eafdb"
 format = '[ $symbol ($version) ]($style)'
 
 [nim]
