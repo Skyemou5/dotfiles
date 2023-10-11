@@ -46,38 +46,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-
-	##1 - original
-
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\[\033[37m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-
-    ##2 - user@host dir
-
-    #parse_git_branch() {
-    #git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-    #}
-
-    #PS1="${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\h \[\033[00m\]\[\033[01;34m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
-
-    ##3 - patched 'fancy' style + stuff from style 2
-	parse_git_branch() {
-        git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
-    }
-
-    show_git_branch() {
-        if [ ! -z "$(parse_git_branch)" ]; then
-            echo -e "\001\033[48;5;8;38;5;4m\002\ue0b0\001\033[0m\002\001\033[0;48;5;8m\002 \uf418 $(parse_git_branch) \001\033[0m\002\001\033[0;38;5;8m\002\ue0b0\001\033[0m\002 "
-        else
-            echo -e "\001\033[38;5;4m\002\ue0b0\001\033[0m\002 "
-        fi
-    }
-
-    triangle=$'\uE0B0'
-
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\h \[\033[0;48;5;4m\] \w\[\033[0m\]$(show_git_branch)'
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[0;48;5;5m\]\u@\h \[\033[0;48;5;4m\] \w\[\033[0m\]$(show_git_branch)'
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[0;48;5;5m\]\u@\h \[\033[0;48;5;4m\] \w\[\033[0m\]$(show_git_branch)'
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -145,15 +114,6 @@ export PATH
 
 #environment variables
 export PAGER='/usr/bin/less'
-
-#powerline shell upgrade
-function _update_ps1() {
-    PS1=$(powerline-shell $?)
-}
-
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
 
 #custom shell options
 s_opts=\
