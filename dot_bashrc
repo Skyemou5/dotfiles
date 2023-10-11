@@ -185,6 +185,7 @@ source /usr/share/fzf/shell/key-bindings.bash
 #source /home/mara/.completions/*
 source ~/.local/share/bash-completion/completions/*
 source ~/.config/sources/fzf-git.sh
+source ~/Apps/forgit/forgit.plugin.sh
 
 #fff
 f() {
