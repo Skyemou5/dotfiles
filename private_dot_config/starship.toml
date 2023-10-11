@@ -2,6 +2,7 @@ format = """
 [](#5e14a3)\
 $os\
 $username\
+$hostname\
 [](fg:#5e14a3 bg:#de3359)\
 $directory\
 [](fg:#de3359 bg:#db7144)\
@@ -28,16 +29,25 @@ $time\
 """
 
 # Disable the blank line at the start of the prompt
-# add_newline = false
+#add_newline = false
+
+#[line_break]
+#disabled = true
 
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
 [username]
 show_always = true
-style_user = "bg:#5e14a3"
-style_root = "bg:#9A348E"
-format = '[$user ]($style)'
+style_user = "bold fg:#46b3ab bg:#5e14a3"
+style_root = "bold bg:#9A348E"
+format = '[ $user]($style)'
 disabled = false
+
+[hostname]
+style = "bold fg:#46b3ab bg:#5e14a3"
+ssh_symbol = '@'
+#trim_at = ''
+format = '[$ssh_symbol$hostname ]($style)'
 
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
