@@ -44,10 +44,11 @@ format = '[ $user]($style)'
 disabled = false
 
 [hostname]
-style = "bold fg:#46b3ab bg:#5e14a3"
-ssh_symbol = '@'
+ssh_only = false
+#ssh_symbol = '@ '
 #trim_at = ''
-format = '[$ssh_symbol$hostname ]($style)'
+style = "bold fg:#46b3ab bg:#5e14a3"
+format = '[@$hostname ]($style)'
 
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
