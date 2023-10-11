@@ -352,3 +352,6 @@ eval "$(navi widget bash)"
 
 #cheat
 export CHEAT_USE_FZF=true
+
+#starship prompt
+eval "$(starship init bash)"
