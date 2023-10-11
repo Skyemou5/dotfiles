@@ -284,7 +284,7 @@ export NNN_PLUG='t:preview-tui;p:preview-tabbed;x:!| tmsu tags "$nnn";q:hard-qui
 #export NNN_PLUG='t:preview-tui;p:preview-tabbed;x:tmsu-tag-plug'
 export NNN_ICONLOOKUP=1
 
-n ()
+function n ()
 {
     # Block nesting of nnn in subshells
     [ "${NNNLVL:-0}" -eq 0 ] || {
@@ -307,7 +307,15 @@ n ()
 
     # The command builtin allows one to alias nnn to n, if desired, without
     # making an infinitely recursive alias
-    command nnn "$@"
+
+	#take ad-hoc args for 'n', but also incorporate defaults (as one would with an alias)
+
+	ext_args=("${@}")
+	ext_args+=(-A)
+	ext_args+=(-H)
+	ext_args+=(-x)
+
+    command nnn "$ext_args"
 
     [ ! -f "$NNN_TMPFILE" ] || {
         . "$NNN_TMPFILE"
