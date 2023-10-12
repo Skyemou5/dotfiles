@@ -115,6 +115,7 @@ export PATH
 
 #environment variables
 export PAGER='/usr/bin/less'
+export EDITOR='nano -lP'
 
 #custom shell options
 s_opts=\
@@ -136,7 +137,6 @@ done
 
 alias open='xdg-open'
 alias off='shutdown -h now'
-alias nano='nano -lP'
 alias update='sudo apt update && sudo apt upgrade -y'
 alias screenlock='xdg-screensaver lock'
 alias mirror='rsync -az --delete --stats'
@@ -158,6 +158,7 @@ alias howdoi='howdoi --color'
 alias tldr='tldr -t ocean'
 alias brncdu='br -s --sort-by-size'
 alias brls='br -sdp'
+alias nvitop='pipx run nvitop -m full --colorful'
 
 #arbitrary functions
 function surface()

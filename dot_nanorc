@@ -1,3 +1,4 @@
 set tabsize 4
 set autoindent
 #set tabstospaces
+set regexp
