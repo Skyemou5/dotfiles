@@ -151,11 +151,13 @@ alias p='pushd'
 alias fzf='fzf-tmux -p 65%,75% -m'
 alias nnn='nnn -AHx'
 alias toss='trash-put'
-alias less='less -N'
+alias less='less -NR'
 alias dust='dust -r'
 alias lsfuse='duf -all -only-fs fuse.pathfs.pathInode'
 alias howdoi='howdoi --color'
 alias tldr='tldr -t ocean'
+alias brncdu='br -s --sort-by-size'
+alias brls='br -sdp'
 
 #arbitrary functions
 function surface()
@@ -199,6 +201,7 @@ export FFF_HIDDEN=1
 #bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
+export BAT_PAGER="less"
 
 #fzf
 
