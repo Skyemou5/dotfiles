@@ -80,3 +80,8 @@ _fzf_complete_person() {
 }
 
 eval "$(atuin init zsh)"
+
+# added for npm-completion https://github.com/Jephuff/npm-bash-completion
+PATH_TO_NPM_COMPLETION="/usr/local/bin/../lib/node_modules/npm-completion"
+source $PATH_TO_NPM_COMPLETION/npm-completion.sh
+
