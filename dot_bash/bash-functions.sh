@@ -25,3 +25,10 @@ function npmlistglobal() {
 		cut -d "/" -f 1 |
 		rev
 }
+
+function installedapps() {
+	comm -13 \
+	<(cat $(echo "$HOME/.static/stockapps.txt" | envsubst) | sort -u) \
+	<(compgen -c | rg "\w" | sort -u) \
+	| sort -ru | fzf
+}
