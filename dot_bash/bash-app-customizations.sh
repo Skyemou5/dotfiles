@@ -110,20 +110,6 @@ eval "$(zoxide init bash)"
 #broot
 source $HOME/.config/broot/launcher/bash/br
 
-#lsd
-
-#function ls {
-#	args="$@"
-#    if [[ -z "$args" ]]; then
-#        args="-1"
-#    elif [[ "$args" == "-s" ]]; then
-#    	command lsd
-#    	return
-#    fi
-#
-#    command lsd "$args"
-#}
-
 #walk
 function lk {
 	cd "$(walk "$@")"
