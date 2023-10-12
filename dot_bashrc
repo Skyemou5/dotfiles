@@ -149,7 +149,7 @@ alias text='gnome-text-editor'
 alias zsh='SHELL=/usr/bin/zsh; zsh'
 alias p='pushd'
 alias fzf='fzf-tmux -p 65%,75% -m'
-alias nnn='nnn -AHx'
+alias nnn='nnn -Ax'
 alias toss='trash-put'
 alias less='less -NR'
 alias dust='dust -r'
@@ -181,6 +181,15 @@ function extract-sentences()
 function manswitch()
 { 
 	man $1 | less -p "^ +$2"
+}
+
+function npmlistglobal()
+{
+	npm list --global --parseable --depth=0 \
+	| sed '1d' \
+	| rev \
+	| cut -d "/" -f 1 \
+	| rev
 }
 
 #sources
@@ -361,3 +370,11 @@ export CHEAT_USE_FZF=true
 
 #starship prompt
 eval "$(starship init bash)"
+
+#expose thefuck 'fuck' alias
+eval $(thefuck --alias)
+
+# added for npm-completion https://github.com/Jephuff/npm-bash-completion
+PATH_TO_NPM_COMPLETION="/usr/local/bin/../lib/node_modules/npm-completion"
+source $PATH_TO_NPM_COMPLETION/npm-completion.sh
+
