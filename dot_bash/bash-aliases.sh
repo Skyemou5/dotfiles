@@ -25,7 +25,7 @@ alias nvitop='pipx run nvitop -m full --colorful'
 alias ls='lsd -1'
 alias lt='lsd --tree'
 alias xargs='xargs '
-alias sk='sk -m'
+alias sk='sk-tmux -m -r'
 alias skgrep="sk --ansi -i -c 'grep -rI --color=always --line-number \"{}\" .' | sd \":.*\" \"\""
 alias skack="sk --ansi -i -c 'ack --color \"{}\"' | sd \":.*\" \"\""
 alias skag="sk --ansi -i -c 'ag --color \"{}\"' | sd \":.*\" \"\""
