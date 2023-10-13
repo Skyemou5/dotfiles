@@ -18,7 +18,14 @@ function manswitch() {
 	man $1 | less -p "^ +$2"
 }
 
-function npmlistglobal() {
+function list-installed-apps() {
+	comm -13 \
+	<(cat $(echo "$HOME/.static/stockapps.txt" | envsubst) | sort -u) \
+	<(compgen -c | rg "\w" | sort -u) \
+	| sort -ru | fzf
+}
+
+function list-npm-global() {
 	npm list --global --parseable --depth=0 |
 		sed '1d' |
 		rev |
@@ -26,9 +33,6 @@ function npmlistglobal() {
 		rev
 }
 
-function installedapps() {
-	comm -13 \
-	<(cat $(echo "$HOME/.static/stockapps.txt" | envsubst) | sort -u) \
-	<(compgen -c | rg "\w" | sort -u) \
-	| sort -ru | fzf
+function list-cargo-global() {
+	cargo install --list | rg -v "^\w" | sd " " "" | sort -u
 }

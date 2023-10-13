@@ -15,4 +15,4 @@ INITIAL_QUERY="${*:-}"
     --header '╱ CTRL-R (ripgrep mode) ╱ CTRL-F (fzf mode) ╱' \
     --preview 'bat --color=always {1} --highlight-line {2}' \
     --preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
-    --bind 'enter:become(vim {1} +{2})'
+    --bind 'enter:become($EDITOR +{2} {1})'
