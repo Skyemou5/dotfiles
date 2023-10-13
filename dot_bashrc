@@ -113,6 +113,7 @@ shopts \
 aliases \
 functions \
 misc-sources \
+bindings \
 app-customizations)
 
 for mod in ${bash_mods[@]}; do
