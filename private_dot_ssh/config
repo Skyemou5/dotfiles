@@ -12,10 +12,10 @@ Host github.com
 	
 Host aegis-r
 	HostName 76.149.240.8
-	Port 4252
 	User mara
-	#PubkeyAcceptedAlgorithms ssh-rsa
-	#HostkeyAlgorithms ssh-rsa
+	Port 4252
+	PubkeyAcceptedAlgorithms rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
+	HostkeyAlgorithms rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
 		
 Host pixel
 	HostName 10.0.0.65
