@@ -30,3 +30,4 @@ alias skgrep="sk --ansi -i -c 'grep -rI --color=always --line-number \"{}\" .' |
 alias skack="sk --ansi -i -c 'ack --color \"{}\"' | sd \":.*\" \"\""
 alias skag="sk --ansi -i -c 'ag --color \"{}\"' | sd \":.*\" \"\""
 alias skrg="sk --ansi -i -c 'rg --color=always --line-number \"{}\"' | sd \":.*\" \"\""
+alias edit="$EDITOR"
