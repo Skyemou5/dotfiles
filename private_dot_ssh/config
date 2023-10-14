@@ -10,6 +10,13 @@ ControlPersist yes
 Host github.com
 	ForwardX11 no
 	
+Host aegis-r
+	HostName 76.149.240.8
+	User mara
+	Port 4252
+	PubkeyAcceptedAlgorithms rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
+	HostkeyAlgorithms rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
+		
 Host pixel
 	HostName 10.0.0.65
 	Port 2222
