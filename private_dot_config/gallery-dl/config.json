@@ -231,6 +231,10 @@
         {
             "metadata": false
         },
+        "patreon":
+        {
+            "cookies": ["firefox"]
+        },
         "pillowfort":
         {
             "external": false,

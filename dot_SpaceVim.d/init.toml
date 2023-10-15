@@ -53,3 +53,14 @@
 
 [[layers]]
     name = "incsearch"
+
+[[layers]]
+    name = "lang#javascript"
+    auto_fix = true
+    enable_flow_syntax = true
+
+#[layers]]
+# name = "lsp"
+# enabled_clients = ['vimjs']
+# [layers.override_client_cmds]
+#   vimjs = ["typescript-language-server", "--stdio"]
