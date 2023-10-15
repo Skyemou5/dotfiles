@@ -53,3 +53,8 @@
 
 [[layers]]
     name = "incsearch"
+
+[[layers]]
+    name = "lang#javascript"
+    auto_fix = true
+    enable_flow_syntax = true
