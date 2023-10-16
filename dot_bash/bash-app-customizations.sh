@@ -138,7 +138,7 @@ eval "$(navi widget bash)"
 #cheat
 export CHEAT_USE_FZF=true
 
-#starship prompt
+#starship prompt + other stuff
 eval "$(starship init bash)"
 
 #expose thefuck 'fuck' alias
