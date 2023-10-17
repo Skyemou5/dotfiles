@@ -105,6 +105,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+#top-level shell options
+set -o vi
+
 #sources all bash sub-modules with aliases, path extensions, etc.
 bash_mods=\
 (paths \
