@@ -2,6 +2,6 @@
 bind -r '\C-T'
 bind -x '"\ef":"fzf"'
 
-bind -x '"\es":"$HOME/.bash/scripts/fzfgrep.sh"'
+bind -x '"\er":"$HOME/.bash/scripts/fzfgrep.sh"'
 #bind -x '"\ec":"cd $(fd -t d | fzf)"'
-
+bind -m vi-insert 'Control-l: clear-screen'
