@@ -29,7 +29,7 @@ bindkey "^[[3;5~" delete-word
 alias nnn="nnn -Hx"
 
 #sources
-source /home/mara/.config/broot/launcher/bash/br
+source $(echo "$HOME/.config/broot/launcher/bash/br" | envsubst) 
 source /usr/share/fzf/completions/completion.zsh
 
 #fzf custom completions
@@ -84,4 +84,7 @@ eval "$(atuin init zsh)"
 # added for npm-completion https://github.com/Jephuff/npm-bash-completion
 PATH_TO_NPM_COMPLETION="/usr/local/bin/../lib/node_modules/npm-completion"
 source $PATH_TO_NPM_COMPLETION/npm-completion.sh
+
+
+PATH_TO_NPM_COMPLETION="/home/mara/.nvm/versions/node/v21.0.0/lib/node_modules/npm-completion"
 

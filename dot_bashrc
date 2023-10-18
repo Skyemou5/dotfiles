@@ -122,3 +122,4 @@ app-customizations)
 for mod in ${bash_mods[@]}; do
     source $(echo "$HOME/.bash/bash-${mod}.sh" | envsubst)
 done
+
