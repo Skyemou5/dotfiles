@@ -85,3 +85,6 @@ eval "$(atuin init zsh)"
 PATH_TO_NPM_COMPLETION="/usr/local/bin/../lib/node_modules/npm-completion"
 source $PATH_TO_NPM_COMPLETION/npm-completion.sh
 
+
+PATH_TO_NPM_COMPLETION="/home/mara/.nvm/versions/node/v21.0.0/lib/node_modules/npm-completion"
+
