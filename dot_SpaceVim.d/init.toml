@@ -8,68 +8,68 @@
 
 # All SpaceVim option below [option] section
 [options]
-    # set spacevim theme. by default colorscheme layer is not loaded,
-    # if you want to use more colorscheme, please load the colorscheme
-    # layer
-    colorscheme = "onedark"
-    colorscheme_bg = "dark"
-    # Disable guicolors in basic mode, many terminal do not support 24bit
-    # true colors
-    enable_guicolors = true
-    # Disable statusline separator, if you want to use other value, please
-    # install nerd fonts
-	guifont = "SauceCodePro Nerd Font Mono:h11"
-    
-    statusline_separator = "arrow"
-    statusline_iseparator = "arrow"
-    buffer_index_type = 4
-    enable_tabline_filetype_icon = true
-    enable_statusline_mode = false
-    filetree_direction = "left"
+  # set spacevim theme. by default colorscheme layer is not loaded,
+  # if you want to use more colorscheme, please load the colorscheme
+  # layer
+  colorscheme = "onedark"
+  colorscheme_bg = "dark"
+  # Disable guicolors in basic mode, many terminal do not support 24bit
+  # true colors
+  enable_guicolors = true
+  # Disable statusline separator, if you want to use other value, please
+  # install nerd fonts
+  guifont = "SauceCodePro Nerd Font Mono:h11"
+
+  statusline_separator = "arrow"
+  statusline_iseparator = "arrow"
+  buffer_index_type = 4
+  enable_tabline_filetype_icon = true
+  enable_statusline_mode = false
+  filetree_direction = "left"
 
 # Enable autocomplete layer
 [[layers]]
-	name = 'autocomplete'
-	auto_completion_return_key_behavior = "complete"
-	auto_completion_tab_key_behavior = "smart"
+  name = 'autocomplete'
+  auto_completion_return_key_behavior = "complete"
+  auto_completion_tab_key_behavior = "smart"
 
 [[layers]]
-	name = 'shell'
-	default_position = 'top'
-	default_height = 30
+  name = 'shell'
+  default_position = 'top'
+  default_height = 30
 
 [[layers]]
   name = "format"
   enable = true
 
 [[layers]]
-	name = "ui"
-	enable_scrollbar = true
+  name = "ui"
+  enable_scrollbar = true
 
 [[layers]]
-	name = "telescope"
+  name = "telescope"
   enable = true
 
 [[layers]]
-	name = "treesitter"
+  name = "treesitter"
 
 [[layers]]
-	name = "colorscheme"
+  name = "colorscheme"
 
 [[layers]]
-    name = "incsearch"
+  name = "incsearch"
 
 [[layers]]
-    name = "lang#javascript"
-    #auto_fix = true
-    #enable_flow_syntax = true
+  name = "lang#javascript"
+  #auto_fix = true
+  #enable_flow_syntax = true
 
 [[layers]]
-    name = "lang#sh"
+  name = "lang#sh"
 
-[layers]]
-    name = "lsp"
-    enabled_clients = ['typescript-language-server', 'bash-language-server']
-
-[layers.override_client_cmds]
-    typescript-language-server = ['typescript-language-server', '--stdio']
+[[layers]]
+  name = "lsp"
+  enabled_clients = ['bash-language-server', 'typescript-language-server']
+  [layers.override_client_cmds]
+    # typescript-language-server = ['typescript-language-server', '--stdio']
+    bash-language-server = ['bash-language-server', 'start']
