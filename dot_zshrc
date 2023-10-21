@@ -29,7 +29,7 @@ bindkey "^[[3;5~" delete-word
 alias nnn="nnn -Hx"
 
 #sources
-source /home/mara/.config/broot/launcher/bash/br
+source $(echo "$HOME/.config/broot/launcher/bash/br" | envsubst) 
 source /usr/share/fzf/completions/completion.zsh
 
 #fzf custom completions
