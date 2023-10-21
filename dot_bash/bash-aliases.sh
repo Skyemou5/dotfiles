@@ -32,3 +32,4 @@ alias skag="sk --ansi -i -c 'ag --color \"{}\"' | sd \":.*\" \"\""
 alias skrg="sk --ansi -i -c 'rg --color=always --line-number \"{}\"' | sd \":.*\" \"\""
 alias edit="$EDITOR"
 alias ncdu="ncdu --show-itemcount"
+alias chezedit='chezmoi edit --apply'
