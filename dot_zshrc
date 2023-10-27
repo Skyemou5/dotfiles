@@ -79,12 +79,19 @@ _fzf_complete_person() {
   )
 }
 
+_fzf_complete_sequence() {
+  _fzf_complete --multi --reverse --prompt="sequence> " -- "$@" < <(
+	cd /run/media/mara/Earth/Backups/Android/.Nandroid_Backups/Tagged\ Collection/files/
+	while read line; do
+		echo "$line"
+	done < <(tmsu values sequence)
+  )
+}
+
 eval "$(atuin init zsh)"
 
 # added for npm-completion https://github.com/Jephuff/npm-bash-completion
 PATH_TO_NPM_COMPLETION="/usr/local/bin/../lib/node_modules/npm-completion"
 source $PATH_TO_NPM_COMPLETION/npm-completion.sh
 
-
 PATH_TO_NPM_COMPLETION="/home/mara/.nvm/versions/node/v21.0.0/lib/node_modules/npm-completion"
-
