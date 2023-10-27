@@ -36,3 +36,9 @@ function list-npm-global() {
 function list-cargo-global() {
 	cargo install --list | rg -v "^\w" | sd " " "" | sort -u
 }
+
+function gifasciinema() {
+  name=$(echo "$1" | rev | cut -d '.' -f 2- | rev)
+  agg --cols 70 --rows 28 --font-size 32 --speed 1.5 --theme dracula "$1" "${name}.gif" 
+  rm "$1"
+}

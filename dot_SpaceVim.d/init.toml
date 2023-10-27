@@ -25,6 +25,10 @@
     enable_statusline_mode = true
     filetree_direction = "left"
 
+[[custom_plugins]]
+repo = "https://github.com/tpope/vim-surround"
+merged = false
+
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
