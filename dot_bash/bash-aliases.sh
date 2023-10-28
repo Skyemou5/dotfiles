@@ -33,3 +33,4 @@ alias skrg="sk --ansi -i -c 'rg --color=always --line-number \"{}\"' | sd \":.*\
 alias edit="$EDITOR"
 alias ncdu="ncdu --show-itemcount"
 alias chezwrite='chezmoi edit --apply'
+alias cast='asciinema rec --overwrite'
