@@ -37,10 +37,6 @@ function list-cargo-global() {
 	cargo install --list | rg -v "^\w" | sd " " "" | sort -u
 }
 
-function ascirec() {
-  command asciinema rec --overwrite "$1"
-}
-
 function gifasciinema() {
   name=$(echo "$1" | rev | cut -d '.' -f 2- | rev)
   agg --cols 52 --rows 18 --font-size 26 --speed 1.5 --theme dracula "$1" "${name}.gif" 
@@ -55,4 +51,8 @@ function count-of-tmsu-tags-by-artist() {
       | xargs -n 2 \
       | sed "s| |,|" \
       | sort -nrt, -k2
+}
+
+function gitroutine() {
+  git add . && git commit -m '$1' && git push && git status
 }
