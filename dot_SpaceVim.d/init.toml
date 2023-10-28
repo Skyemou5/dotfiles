@@ -29,6 +29,10 @@
 repo = "https://github.com/tpope/vim-surround"
 merged = false
 
+[[custom_plugins]]
+repo = "https://github.com/mg979/vim-visual-multi"
+merged = false
+
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
