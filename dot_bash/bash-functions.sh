@@ -54,5 +54,5 @@ function count-of-tmsu-tags-by-artist() {
 }
 
 function gitroutine() {
-  git add . && git commit -m '$1' && git push && git status
+  git add . && git commit -m "$1" && git push && git status
 }
