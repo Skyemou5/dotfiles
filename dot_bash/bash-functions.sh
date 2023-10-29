@@ -40,7 +40,7 @@ function list-cargo-global() {
 function gifasciinema() {
   name=$(echo "$1" | rev | cut -d '.' -f 2- | rev)
   agg --cols 52 --rows 18 --font-size 26 --speed 1.5 --theme dracula "$1" "${name}.gif" 
-  rm "$1"
+  # rm "$1"
 }
 
 function count-of-tmsu-tags-by-artist() {
