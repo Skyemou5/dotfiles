@@ -27,6 +27,8 @@ bindkey "^[[3;5~" delete-word
 
 #custom aliases
 alias nnn="nnn -Hx"
+alias mv="mv --backup=numbered"
+alias xargs="xargs "
 
 #sources
 source $(echo "$HOME/.config/broot/launcher/bash/br" | envsubst) 
