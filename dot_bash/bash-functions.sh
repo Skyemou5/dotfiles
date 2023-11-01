@@ -43,6 +43,12 @@ function gifasciinema() {
   # rm "$1"
 }
 
+function gifasciinema-no-dimensions() {
+  name=$(echo "$1" | rev | cut -d '.' -f 2- | rev)
+  agg --font-size 26 --speed 1.5 --theme dracula "$1" "${name}.gif" 
+  # rm "$1"
+}
+
 function count-of-tmsu-tags-by-artist() {
   for item in $(tmsu values -1 artist); do 
     echo "$item"; 
