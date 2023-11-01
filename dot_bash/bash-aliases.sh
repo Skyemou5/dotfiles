@@ -34,3 +34,4 @@ alias edit="$EDITOR"
 alias ncdu="ncdu --show-itemcount"
 alias chezwrite='chezmoi edit --apply'
 alias cast='asciinema rec --overwrite'
+alias mv='mv --backup=numbered'
