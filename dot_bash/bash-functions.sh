@@ -49,6 +49,12 @@ function gifasciinema-no-dimensions() {
   # rm "$1"
 }
 
+function webm2gif() {
+    ffmpeg -y -i "$1" -vf palettegen _tmp_palette.png
+    ffmpeg -y -i "$1" -i _tmp_palette.png -filter_complex paletteuse -r 10  "${1%.webm}.gif"
+    rm _tmp_palette.png
+}
+
 function count-of-tmsu-tags-by-artist() {
   for item in $(tmsu values -1 artist); do 
     echo "$item"; 
