@@ -138,7 +138,7 @@ eval "$(navi widget bash)"
 #cheat
 export CHEAT_USE_FZF=true
 
-if [[ ! $USER == 'mara' ]]; then
+if [[ ! $USER == ma* ]]; then
   #starship prompt + other stuff
   eval "$(starship init bash)"
 fi
