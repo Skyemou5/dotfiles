@@ -9,6 +9,11 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+#custom startup stuff
+exec --no-startup-id feh --no-fehbg --bg-scale '/home/mara/Pictures/wallpapers/wallpaper-main.png'
+exec --no-startup-id xrandr --output DP-5 --left-of HDMI-0
+
+#set modifiers
 set $mod Mod1
 set $super Mod4
 
