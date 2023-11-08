@@ -138,10 +138,12 @@ eval "$(navi widget bash)"
 #cheat
 export CHEAT_USE_FZF=true
 
-if [[ ! $USER == ma* ]]; then
-  #starship prompt + other stuff
-  eval "$(starship init bash)"
-fi
+# if [[ ! $USER == ma* ]]; then
+  # starship prompt + other stuff
+  # eval "$(starship init bash)"
+# fi
+
+eval "$(starship init bash)"
 
 #expose thefuck 'fuck' alias
 eval $(thefuck --alias)
