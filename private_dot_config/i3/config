@@ -9,6 +9,12 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+#custom startup stuff
+exec --no-startup-id feh --no-fehbg --bg-scale '/home/mara/Pictures/wallpapers/wallpaper-main.png'
+exec --no-startup-id xrandr --output DP-5 --left-of HDMI-0
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --nofork
+
+#set modifiers
 set $mod Mod1
 set $super Mod4
 
@@ -29,7 +35,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -227,6 +233,16 @@ bindsym $mod+t split toggle
 
 bindsym $mod+Tab workspace next_on_output
 bindsym $mod+Shift+Tab workspace prev_on_output
+
+bindsym $mod+Control+Left workspace prev
+bindsym $mod+Control+Right workspace next
+
+bindsym $mod+i workspace 2
+bindsym $mod+o workspace 1
+bindsym $mod+p workspace back_and_forth
+
+# bindsym $super+l exec i3lock -c 000000
+bindsym $super+l exec --no-startup-id systemctl suspend
 
 bindsym $mod+Shift+g gaps inner all toggle $standard_gap, \
 gaps outer all toggle $standard_gap
