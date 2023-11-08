@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
+set $super Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -102,6 +103,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+bindsym $mod+x layout default
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -167,10 +169,15 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        # bindsym j resize shrink width 10 px or 10 ppt
+        # bindsym k resize grow height 10 px or 10 ppt
+        # bindsym l resize shrink height 10 px or 10 ppt
+        # bindsym semicolon resize grow width 10 px or 10 ppt
+
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -188,11 +195,18 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+# bar {
+        # status_command i3status
+# }
 
 #custom stuff
+
+#variables
+set $cool_purple #7952c7
+set $black_pearl #031222
+set $standard_gap 10
+
+#KEYBINDS
 # i3 uses jkl; instead of hjkl -- fix that
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -214,5 +228,69 @@ bindsym $mod+t split toggle
 bindsym $mod+Tab workspace next_on_output
 bindsym $mod+Shift+Tab workspace prev_on_output
 
+bindsym $mod+Shift+g gaps inner all toggle $standard_gap, \
+gaps outer all toggle $standard_gap
+
 # default orientation
 default_orientation horizontal
+
+#window title
+title_align center
+
+#auto floats...
+for_window [class="Gnome-system-monitor"] floating enable
+
+#mouse focus
+focus_follows_mouse no
+
+#auto back and forth
+workspace_auto_back_and_forth yes
+
+#vim style marks!
+
+# read 1 character and mark the current window with this character
+bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
+# read 1 character and go to the window with the character
+bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
+
+#show vim marks
+show_marks yes
+
+#startup apps
+exec /usr/bin/flameshot
+exec ~/.config/i3/scripts/discord.sh
+
+#scratchpad stuff
+#send to scratchpad ('minimize')
+bindsym $super+m move scratchpad
+#show 1st scratchpad window
+bindsym $super+shift+m scratchpad show
+
+#gaps
+gaps inner $standard_gap
+gaps outer $standard_gap
+smart_gaps on
+
+#restore x11 wallpaper on session login
+exec waypaper --restore
+
+#font
+font pango:DejaVuSansM 12
+
+#i3bar
+
+bar {
+  status_command i3status
+  i3bar_command i3bar --transparency
+  padding 1px
+
+  colors {
+    background #08284a78
+    statusline $cool_purple
+    separator #ffffff
+    focused_workspace #d980d0 $cool_purple #b9a9c4
+  }
+}
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 $black_pearl #ffffff #2e9ef4   #285577
