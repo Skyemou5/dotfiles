@@ -5,7 +5,7 @@ TCPKeepAlive=yes
 Compression=yes
 ControlMaster auto
 ControlPath /tmp/%r@%h:%p
-ControlPersist yes
+#ControlPersist yes
 
 Host github.com
 	ForwardX11 no
