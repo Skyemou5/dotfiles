@@ -1,0 +1,4 @@
+. "$HOME/.cargo/env"
+
+# enable user-wide dark theme via 'brute force'
+export GTK_THEME=Adwaita:dark
