@@ -13,6 +13,7 @@ call plug#end()
 colorscheme dracula
 
 " 'sets'
+set number
 set relativenumber
 set tabstop=4
 set expandtab
