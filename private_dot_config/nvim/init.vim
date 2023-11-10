@@ -7,6 +7,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
+Plug 'farmergreg/vim-lastplace'
 call plug#end()
 
 " additional plugin configuration

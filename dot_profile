@@ -2,3 +2,8 @@
 
 # enable user-wide dark theme via 'brute force'
 export GTK_THEME=Adwaita:dark
+
+# clipmenu stuff
+# clipmenu clipboard management session-wide
+export CM_LAUNCHER=rofi
+export CM_MAX_CLIPS=10000

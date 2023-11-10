@@ -1,0 +1,2 @@
+# ensure clipmenu systemd service can work with wm / without a desktop
+systemctl --user import-environment DISPLAY
