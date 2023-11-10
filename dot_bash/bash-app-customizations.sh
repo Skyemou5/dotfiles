@@ -132,9 +132,6 @@ source "$HOME/.cargo/env"
 # Bind up-arrow but not ctrl-r
 eval "$(atuin init bash --disable-ctrl-r)"
 
-# Bind ctrl-g to navi as a widget
-eval "$(navi widget bash)"
-
 #cheat
 export CHEAT_USE_FZF=true
 
