@@ -77,8 +77,25 @@ bindsym $mod+Shift+q kill
 # all rofi modes...
 # run,drun,window,ssh,filebrowser,keys,script,combi,
 
-bindcode $mod+65 exec "rofi -modes drun,window,filebrowser,keys -show drun"
-bindcode $mod+47 exec "rofi -modes drun,window,filebrowser,keys -show window"
+# examples of paths to "adi1090x" rofi launchers and powermenus
+
+# /home/mara/.config/rofi/scripts/launcher_tN
+# /home/mara/.config/rofi/scripts/powermenu_tN
+
+
+# bindcode $mod+65 exec "rofi -modes drun,window,filebrowser,keys -show drun"
+# for rofi here, just replace type-N and style-N for the type and style you wish to invoke
+# bindcode $mod+65 exec "rofi -modes drun,window,filebrowser,keys -show drun -theme ~/.config/rofi/launchers/type-3/style-10.rasi"
+bindcode $mod+65 exec ~/.config/rofi/launchers/type-1/launcher.sh
+# bindcode $mod+65 exec "rofi -modes drun,window,filebrowser,keys -show drun -theme $HOME/.config/rofi/launchers/type-3/style-10.rasi"
+
+# bindcode $mod+47 exec "rofi -modes drun,window,filebrowser,keys -show window"
+# bindcode $mod+65 exec "rofi -modes drun,window,filebrowser,keys -show window -theme ~/.config/rofi/launchers/type-3/style-10.rasi"
+
+bindcode $mod+47 exec ~/.config/rofi/launchers/type-1/launcher-window.sh
+
+#clipmenu invocation
+bindsym $super+space exec clipmenu
 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
@@ -256,7 +273,8 @@ bindsym $mod+p workspace back_and_forth
 
 # bindsym $super+l exec i3lock -c 000000
 # bindsym $super+l exec --no-startup-id systemctl suspend
-bindsym $super+l exec --no-startup-id loginctl lock-session 
+# bindsym $super+l exec --no-startup-id loginctl lock-session 
+bindsym $super+l exec --no-startup-id ~/.config/rofi/scripts/powermenu_t3
 
 bindsym $mod+Shift+g gaps inner all toggle $standard_gap, \
 gaps outer all toggle $small_gap
@@ -297,9 +315,6 @@ bindsym $super+shift+m scratchpad show
 gaps inner $standard_gap
 gaps outer $small_gap
 smart_gaps on
-
-#clipmenu invocation
-bindsym $super+space exec clipmenu
 
 #restore x11 wallpaper on session login
 exec waypaper --restore
