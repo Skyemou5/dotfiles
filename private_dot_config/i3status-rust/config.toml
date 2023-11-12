@@ -28,11 +28,11 @@ command = "~/.bash/scripts/chezcheck.sh"
 # aur_command should output available updates to stdout (ie behave as echo -ne "update\n")
 # aur_command = "yay -Qua"
 
-[[block]]
-block = "focused_window"
-[block.format]
-full = " $title.str(max_w:15) |"
-short = " $title.str(max_w:10) |"
+# [[block]]
+# block = "focused_window"
+# [block.format]
+# full = " $title.str(max_w:15) |"
+# short = " $title.str(max_w:10) |"
 
 [[block]]
 block = "cpu"
