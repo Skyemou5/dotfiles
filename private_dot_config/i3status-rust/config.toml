@@ -1,7 +1,7 @@
 icons_format = "{icon}"
 
 [theme]
-theme = "ctp-macchiato"
+theme = "nord-dark"
 [theme.overrides]
 idle_bg = "#123456"
 idle_fg = "#abcdef"
@@ -11,6 +11,28 @@ icons = "awesome4"
 [icons.overrides]
 bat = ["|E|", "|_|", "|=|", "|F|"]
 bat_charging = "|^| "
+
+[[block]]
+block = "custom"
+interval = 3
+command = "~/dev/wm/chezcheck.sh" 
+
+[[block]]
+block = "pacman"
+interval = 600
+error_interval = 300
+format = " $icon $pacman + $aur = $both updates available "
+format_singular = " $icon $both update available "
+format_up_to_date = " $icon system up to date "
+critical_updates_regex = "(linux|linux-lts|linux-zen)"
+# aur_command should output available updates to stdout (ie behave as echo -ne "update\n")
+aur_command = "yay -Qua"
+
+[[block]]
+block = "focused_window"
+[block.format]
+full = " $title.str(max_w:15) |"
+short = " $title.str(max_w:10) |"
 
 [[block]]
 block = "cpu"
