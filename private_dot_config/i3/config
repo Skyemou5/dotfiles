@@ -255,6 +255,9 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
+# swaps
+bindsym $mod+comma swap container with mark s
+
 # vim-style arrow-keys require rebinding "split-h"
 # rebind "split-v" as well, for consistency
 # bindsym $mod+Shift+backslash split h
@@ -288,6 +291,10 @@ title_align center
 #auto floats...
 for_window [class="Gnome-system-monitor"] floating enable
 for_window [class="kooha"] floating enable
+
+#auto workspace assignments
+assign [class="^discord$"] 3
+for_window [title=Firefox.*Private] move to workspace 4
 
 #mouse focus
 focus_follows_mouse no
@@ -341,9 +348,10 @@ font pango:DejaVuSansM 12
 client.focused          #4c7899 $black_pearl #ffffff #2e9ef4   #285577
 
 bar {
-    font pango:DejaVu Sans Mono, FontAwesome 12
+    font pango:DejaVu Sans Mono, FontAwesome 16
     position bottom
-    #tray_output none
+    height 30
+    #tray_output primary
     status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml
     colors {
         separator #666666
