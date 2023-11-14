@@ -306,7 +306,7 @@ bindsym $mod+Control+space [class="^kitty$"] scratchpad show
 # bindsym $mod+Control+space [con_mark="0"] scratchpad show
 
 #auto workspace assignments
-assign [class="^discord$"] 3
+assign [class="^discord$"] 2
 for_window [title=Firefox.*Private] move to workspace 4
 
 #mouse focus
