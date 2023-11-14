@@ -16,8 +16,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --nofork
 exec --no-startup-id "picom -b"
 
 #start easyeffects and immediately hide
-exec --no-startup-id "flatpak run com.github.wwmm.easyeffects & disown"
-for_window [class="^easyeffects$"] move scratchpad
+# exec --no-startup-id "flatpak run com.github.wwmm.easyeffects & disown"
 
 #startup terminal
 exec kitty
@@ -250,6 +249,7 @@ bindsym $mod+r mode "resize"
 
 #variables
 set $cool_purple #7952c7
+set $dark_purple #2e2647
 set $black_pearl #031222
 set $standard_gap 10
 set $small_gap 2
@@ -304,6 +304,9 @@ title_align center
 for_window [class="Gnome-system-monitor"] floating enable
 for_window [class="kooha"] floating enable
 for_window [class="easyeffects"] floating enable
+for_window [class="flameshot"] floating enable
+for_window [class="loupe"] floating enable
+for_window [class="Gnome-tweaks"] floating enable
 
 #guake-style terminal
 # bindsym $mod+Control+space [class="^kitty$"] scratchpad show
@@ -312,7 +315,11 @@ bindsym $mod+Control+space [class="^kitty$"] scratchpad show
 
 #auto workspace assignments
 assign [class="^discord$"] 2
+assign [class="^tidal-hifi$"] 2
+assign [class="^teams$"] 3
+assign [title="^Microsoft Teams.*"] 3
 for_window [title=Firefox.*Private] move to workspace 4
+for_window [class="^easyeffects$"] move scratchpad
 
 #mouse focus
 focus_follows_mouse no
@@ -363,7 +370,8 @@ font pango:DejaVuSansM 12
 # }
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 $black_pearl #ffffff #2e9ef4   #285577
+client.focused          #4c7899 $dark_purple #ffffff #2e9ef4   #285577
+client.unfocused          #4c7899 $black_pearl #ffffff #2e9ef4   #285577
 
 bar {
     font pango:DejaVu Sans Mono, FontAwesome 16
