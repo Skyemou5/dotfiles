@@ -10,3 +10,8 @@ export CM_MAX_CLIPS=10000
 
 #theme parity for gtk and qt styles
 export QT_STYLE_OVERRIDE=adwaita
+
+#screenshots location on hyprland
+export HYPRSHOT_DIR="/home/mara/Pictures/Screenshots"
+
+export MOZ_ENABLE_WAYLAND=1 firefox
