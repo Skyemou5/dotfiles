@@ -68,3 +68,42 @@ function count-of-tmsu-tags-by-artist() {
 function gitroutine() {
   git add . && git commit -m "$1" && git push && git status
 }
+
+function machineSync() {
+  #description: on arch system(s), compare explicitely installed
+  #packages between curr machine and some remote - can ask for
+  #natively installed packages (pacman) or "foreign" (aur)
+  #
+  #NOTE that, on local end, this construct:
+  #{THIS_COMMAND} | cut -f {N} | xargs -n 1
+  #will allow for splitting field on default TAB
+  #and will then remove all empty lines, providing clean
+  #output that shows either the unique packages on 'remote' or 'local',
+  #depending on 'N' (1 or 2). this construct is left out so user can
+  #first *compare* the two columns of output, then narrow down to one if desired,
+  #perhaps to then send off to xargs and install all applicable packages with pacman
+  #
+  #arg1 - machine[port]
+  #arg2 - native or foreign packages: 'n' or 'm', respectively
+  
+  local_packages="local_packages.txt"
+  remote_packages="remote_packages.txt"
+  user_and_hostname="$1"
+
+  #unsafe - TODO: replace this with a safe alternative
+  #current usage is because non-EVAL wasn't expanding the ssh command properly
+  #and was having issue with hostname
+  remote_command="ssh ${user_and_hostname} \"pacman -Qe${2}\" | cut -d ' ' -f 1 | sort -u"
+
+  pacman -Qe"${2}" | cut -d ' ' -f 1 | sort -u > $local_packages
+  eval "$remote_command" > $remote_packages
+
+  comm_result=$(comm -3 $remote_packages $local_packages)
+
+  if [[ ! -z "$3" && "$3" == "install" ]]; then
+    echo "$comm_result" | cut -f 1 | xargs -n 1 sudo pacman -S
+  else
+    echo "$comm_result"
+  fi
+
+}
