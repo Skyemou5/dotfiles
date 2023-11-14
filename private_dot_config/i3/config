@@ -13,8 +13,13 @@
 exec --no-startup-id feh --no-fehbg --bg-scale '/home/mara/Pictures/wallpapers/wallpaper-main.png'
 exec --no-startup-id xrandr --output DP-5 --left-of HDMI-0
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --nofork
+exec --no-startup-id "picom -b"
 
-#startup apps
+#startup terminal
+exec kitty
+for_window [class="^kitty$"] move scratchpad
+# [class="^kitty$"] mark "0"
+
 exec /usr/bin/flameshot
 
 #set modifiers
@@ -62,7 +67,10 @@ tiling_drag modifier titlebar
 # bindsym $mod+Return exec i3-sensible-terminal
 
 # start kitty terminal
-bindsym $mod+Return exec /usr/bin/kitty
+# bindsym $mod+Return exec /usr/bin/kitty
+
+# start kitty terminal
+bindsym $mod+Return exec /usr/bin/kgx
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -292,8 +300,13 @@ title_align center
 for_window [class="Gnome-system-monitor"] floating enable
 for_window [class="kooha"] floating enable
 
+#guake-style terminal
+# bindsym $mod+Control+space [class="^kitty$"] scratchpad show
+bindsym $mod+Control+space [class="^kitty$"] scratchpad show
+# bindsym $mod+Control+space [con_mark="0"] scratchpad show
+
 #auto workspace assignments
-assign [class="^discord$"] 3
+assign [class="^discord$"] 2
 for_window [title=Firefox.*Private] move to workspace 4
 
 #mouse focus

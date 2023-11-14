@@ -153,3 +153,9 @@ source $PATH_TO_NPM_COMPLETION/npm-completion.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#picom-trans stuff
+
+# if command -v picom-trans &> /dev/null; then
+#   picom-trans -n "kitty" 92
+# fi
