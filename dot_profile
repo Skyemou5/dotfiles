@@ -7,3 +7,6 @@ export GTK_THEME=Adwaita:dark
 # clipmenu clipboard management session-wide
 export CM_LAUNCHER=rofi
 export CM_MAX_CLIPS=10000
+
+#theme parity for gtk and qt styles
+export QT_STYLE_OVERRIDE=adwaita
