@@ -15,6 +15,10 @@ exec --no-startup-id xrandr --output DP-5 --left-of HDMI-0
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --nofork
 exec --no-startup-id "picom -b"
 
+#start easyeffects and immediately hide
+exec --no-startup-id "flatpak run com.github.wwmm.easyeffects & disown"
+for_window [class="^easyeffects$"] move scratchpad
+
 #startup terminal
 exec kitty
 for_window [class="^kitty$"] move scratchpad
@@ -299,6 +303,7 @@ title_align center
 #auto floats...
 for_window [class="Gnome-system-monitor"] floating enable
 for_window [class="kooha"] floating enable
+for_window [class="easyeffects"] floating enable
 
 #guake-style terminal
 # bindsym $mod+Control+space [class="^kitty$"] scratchpad show
