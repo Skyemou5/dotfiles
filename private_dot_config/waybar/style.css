@@ -49,6 +49,7 @@ window#waybar.hidden {
 
 #memory,
 #custom-power,
+#custom-chezcheck,
 #battery,
 #backlight,
 #pulseaudio,
@@ -64,6 +65,10 @@ window#waybar.hidden {
 
 #custom-power {
   margin-right: 6px;
+}
+
+#custom-chezcheck {
+  background-color: #c08aff;
 }
 
 #custom-logo {

@@ -12,6 +12,7 @@
     ],
     "modules-right": [
         "tray",
+        "custom/chezcheck",
         "memory",
         "network",
         "pulseaudio",
@@ -25,6 +26,19 @@
         "icon-theme": "WhiteSur",
         "icon-size": 25,
         "tooltip-format": "{title}"
+    },
+    "custom/chezcheck": {
+        "exec": "~/.bash/scripts/chezcheck-waybar.sh",
+        "height": 42,
+        "return-type": "json",
+        "format": "{icon}",
+        "format-icons": {
+            "default": "🔲",
+            "success": "☑️",
+        },
+        "tooltip": true,
+        "tooltip-format": "{tooltip}",
+        "interval": 3
     },
     "hyprland/workspaces": {
         "on-click": "activate",
