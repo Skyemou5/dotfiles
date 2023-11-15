@@ -107,3 +107,31 @@ function machineSync() {
   fi
 
 }
+
+function wp_replace() {
+  to_process="$1"
+
+  #no arg - capture STDIN instead
+  if [[ -z "$to_process" ]]; then
+    read -r curr_file
+    to_process="$curr_file"
+  fi
+  
+  hyprpaper_path="$HOME/.config/hypr/hyprpaper.conf"
+  #get link to file
+  readlink -f "$to_process" | \
+  #sanitize / escape forward-slashes
+  sd "/" "\/" | \
+  #replace every path in hyprpaper_path file with new path
+  xargs -I {} sed -i "s|\/home.*|{}|" "$hyprpaper_path" 
+  
+  echo "wallpaper changed to ${to_process}"
+}
+
+function wp_shuffle() {
+  curr_file=$(fd --base-directory="$HOME/Pictures/wallpapers/" -t f | \
+  shuf -n 1 | \
+  xargs readlink -f)
+
+  wp_replace "$curr_file"
+}
