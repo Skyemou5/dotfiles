@@ -159,3 +159,6 @@ export NVM_DIR="$HOME/.nvm"
 # if command -v picom-trans &> /dev/null; then
 #   picom-trans -n "kitty" 92
 # fi
+
+#alacritty completions
+source ~/.bash_completion/alacritty

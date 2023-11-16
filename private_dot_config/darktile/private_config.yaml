@@ -1,0 +1,8 @@
+opacity: 1
+font:
+  family: "DejaVuSansM Nerd Font"
+  size: 18
+  dpi: 72
+  ligatures: true
+cursor:
+  image: ""
