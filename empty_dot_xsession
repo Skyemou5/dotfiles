@@ -1,5 +1,0 @@
-#!/bin/sh
-# xrandr --output DP-3 --auto
-# xrandr --output HDMI-A-1 --auto
-# xrandr --output HDMI-A-1 --right-of DP-3
-# xrandr --output DP-3 --primary
