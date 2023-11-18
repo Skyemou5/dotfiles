@@ -49,6 +49,7 @@ window#waybar.hidden {
 
 #memory,
 #custom-power,
+#custom-audio_idle_inhibitor,
 #custom-chezcheck,
 #battery,
 #backlight,
@@ -69,6 +70,10 @@ window#waybar.hidden {
 
 #custom-chezcheck {
   background-color: #c08aff;
+}
+
+#custom-audio_idle_inhibitor {
+  background-color: #cf42be;
 }
 
 #custom-logo {
