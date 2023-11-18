@@ -1,6 +1,7 @@
 # GLOBAL
 max-history=100
 sort=-time
+output=DP-2
 
 # BINDING OPTIONS
 on-button-left=dismiss
