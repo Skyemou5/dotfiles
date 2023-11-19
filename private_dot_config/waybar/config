@@ -14,6 +14,7 @@
   "modules-right": [
     "tray",
     "custom/chezcheck",
+    "custom/wl-color-picker",
     "memory",
     "network",
     "pulseaudio",
@@ -39,7 +40,16 @@
     },
     "tooltip": true,
     "tooltip-format": "{tooltip}",
-    "interval": 3
+    "interval": 2
+  },
+  "custom/wl-color-picker": {
+    "exec-on-event": true,
+    "on-click": "/usr/bin/wl-color-picker",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "\ue22b",
+    },
+    "tooltip": false
   },
   "hyprland/workspaces": {
     "on-click": "activate",

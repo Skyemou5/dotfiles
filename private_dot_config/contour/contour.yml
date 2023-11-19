@@ -242,7 +242,7 @@ profiles:
             # The response can be read from stdin as sequence `OSC 314 ; <screen capture> ST`
             capture_buffer: ask
             # Allows displaying the "Host Writable Statusline" programmatically using `DECSSDT 2`.
-            display_host_writable_statusline: ask
+            display_host_writable_statusline: deny
 
         # If enabled, and you double-click on a word in the primary screen,
         # all other words matching this word will be highlighted as well.
