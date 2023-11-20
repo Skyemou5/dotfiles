@@ -2,7 +2,7 @@
 alias update='sudo apt update && sudo apt upgrade -y'
 #gnome
 alias open='xdg-open'
-alias lock='xdg-screensaver lock'
+alias lock='swaylock -f -c 000000'
 alias screenlock='xdg-screensaver lock'
 #common / core
 alias off='shutdown -h now'
