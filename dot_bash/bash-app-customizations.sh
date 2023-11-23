@@ -19,9 +19,9 @@ export FZF_DEFAULT_OPTS="
 --preview-window hidden
 --bind 'ctrl-y:execute-silent(printf {} | cut -f 2- | xclip -r -sel c)'
 --bind 'ctrl-p:toggle-preview'
---bind 'alt-l:clear-query'
---bind 'alt-c:clear-selection'
---bind 'alt-a:toggle-all'
+--bind 'ctrl-l:clear-query'
+--bind 'ctrl-s:clear-selection'
+--bind 'ctrl-a:toggle-all'
 "
 
 # Preview fzf file content using bat (https://github.com/sharkdp/bat)

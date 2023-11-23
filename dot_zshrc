@@ -91,6 +91,16 @@ _fzf_complete_sequence() {
   )
 }
 
+function count-of-tmsu-tags-by-artist() {
+  for item in $(tmsu values -1 artist); do 
+    echo "$item"; 
+    tmsu files artist="$item" -c; 
+  done \
+      | xargs -n 2 \
+      | sed "s| |,|" \
+      | sort -nrt, -k2
+}
+
 eval "$(atuin init zsh)"
 
 # added for npm-completion https://github.com/Jephuff/npm-bash-completion
