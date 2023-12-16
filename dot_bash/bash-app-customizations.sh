@@ -146,8 +146,8 @@ eval "$(starship init bash)"
 eval $(thefuck --alias)
 
 # added for npm-completion https://github.com/Jephuff/npm-bash-completion
-PATH_TO_NPM_COMPLETION="/usr/local/bin/../lib/node_modules/npm-completion"
-source $PATH_TO_NPM_COMPLETION/npm-completion.sh
+# PATH_TO_NPM_COMPLETION="/usr/local/bin/../lib/node_modules/npm-completion"
+# source $PATH_TO_NPM_COMPLETION/npm-completion.sh
 
 # enables and bootstraps nvm
 export NVM_DIR="$HOME/.nvm"
