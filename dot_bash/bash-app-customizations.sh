@@ -129,9 +129,6 @@ source "$HOME/.cargo/env"
 # Bind ctrl-r but not up arrow
 #eval "$(atuin init bash --disable-up-arrow)"
 
-# Bind up-arrow but not ctrl-r
-eval "$(atuin init bash --disable-ctrl-r)"
-
 #cheat
 export CHEAT_USE_FZF=true
 
@@ -141,6 +138,9 @@ export CHEAT_USE_FZF=true
 # fi
 
 eval "$(starship init bash)"
+
+# Bind up-arrow but not ctrl-r
+eval "$(atuin init bash --disable-ctrl-r)"
 
 #expose thefuck 'fuck' alias
 eval $(thefuck --alias)

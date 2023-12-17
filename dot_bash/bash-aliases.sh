@@ -15,6 +15,7 @@ alias xargs='xargs '
 alias edit="$EDITOR"
 alias mv='mv --backup=numbered'
 #apps
+alias crontab='EDITOR=lvim crontab'
 alias mirror='rsync -avz --delete --human-readable --progress --stats'
 alias mirror-dry='rsync -avzn --delete --human-readable --progress --stats'
 alias gte='gnome-text-editor'

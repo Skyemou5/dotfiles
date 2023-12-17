@@ -1,6 +1,7 @@
-source ~/.local/share/bash-completion/completions/*
-#source /usr/share/fzf/shell/key-bindings.bash
-#source ~/.config/sources/fzf-git.sh
-#source ~/Apps/forgit/forgit.plugin.sh
-#source /home/mara/.completions/*
-#source /usr/share/autojump/autojump.bash
+dirs=\
+(~/.local/share/bash-sources/completions \
+~/.local/share/bash-sources/misc-sources)
+
+for dir in ${dirs[@]}; do
+    source $(echo "${dir}/*" | envsubst)
+done
