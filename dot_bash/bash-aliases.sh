@@ -4,12 +4,14 @@ alias update='sudo apt update && sudo apt upgrade -y'
 alias open='xdg-open'
 alias lock='swaylock -f -c 000000'
 alias screenlock='xdg-screensaver lock'
-#common / core
+#utility
 alias off='shutdown -h now'
 alias zsh='SHELL=/usr/bin/zsh; zsh'
 alias p='pushd'
 alias l='clear'
 alias toss='trash-put'
+alias fzfclip='cliphist list | fzf | cliphist decode | wl-copy'
+alias batcolor='bat --language bash'
 alias less='less -NR'
 alias xargs='xargs '
 alias edit="$EDITOR"
