@@ -4,6 +4,7 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 require('user.options')
+-- require('user.plugins')
 
 lvim.plugins = {
   { "tpope/vim-surround" },
