@@ -30,7 +30,7 @@
     "tooltip-format": "{title}"
   },
   "custom/chezcheck": {
-    "exec": "~/.bash/scripts/chezcheck-waybar.sh",
+    "exec": "~/.scripts/chezcheck-waybar.sh",
     "height": 42,
     "return-type": "json",
     "format": "{icon}",
