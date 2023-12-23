@@ -10,6 +10,10 @@ function surface() {
 	exit 0
 }
 
+function zero-terminated() {
+    tr '\n' '\0'
+}
+
 function extract-sentences() {
 	sd "\. " ".\n"
 }

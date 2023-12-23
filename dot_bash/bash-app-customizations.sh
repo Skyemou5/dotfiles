@@ -160,5 +160,3 @@ export NVM_DIR="$HOME/.nvm"
 #   picom-trans -n "kitty" 92
 # fi
 
-#alacritty completions
-source ~/.bash_completion/alacritty
