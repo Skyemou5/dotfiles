@@ -29,6 +29,7 @@ bindkey "^[[3;5~" delete-word
 alias nnn="nnn -Hx"
 alias mv="mv --backup=numbered"
 alias xargs="xargs "
+alias tag="tmsu tag \"$nnn\""
 
 #sources
 source $(echo "$HOME/.config/broot/launcher/bash/br" | envsubst) 
@@ -88,6 +89,16 @@ _fzf_complete_sequence() {
 		echo "$line"
 	done < <(tmsu values sequence)
   )
+}
+
+function count-of-tmsu-tags-by-artist() {
+  for item in $(tmsu values -1 artist); do 
+    echo "$item"; 
+    tmsu files artist="$item" -c; 
+  done \
+      | xargs -n 2 \
+      | sed "s| |,|" \
+      | sort -nrt, -k2
 }
 
 eval "$(atuin init zsh)"

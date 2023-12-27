@@ -15,6 +15,7 @@ colorscheme dracula
 
 " 'sets'
 set number
+set wrap
 set relativenumber
 set tabstop=4
 set expandtab

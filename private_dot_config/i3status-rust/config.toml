@@ -15,7 +15,7 @@ bat_charging = "|^| "
 [[block]]
 block = "custom"
 interval = 3
-command = "~/.bash/scripts/chezcheck.sh" 
+command = "~/.scripts/chezcheck.sh" 
 
 # [[block]]
 # block = "pacman"

@@ -20,7 +20,7 @@ exec --no-startup-id "picom -b"
 
 #startup terminal
 exec kitty
-for_window [class="^kitty$"] move scratchpad
+for_window [class="^contour$"] move scratchpad
 # [class="^kitty$"] mark "0"
 
 exec /usr/bin/flameshot
@@ -73,7 +73,7 @@ tiling_drag modifier titlebar
 # bindsym $mod+Return exec /usr/bin/kitty
 
 # start kitty terminal
-bindsym $mod+Return exec /usr/bin/kgx
+bindsym $mod+Return exec /usr/bin/kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -310,7 +310,7 @@ for_window [class="Gnome-tweaks"] floating enable
 
 #guake-style terminal
 # bindsym $mod+Control+space [class="^kitty$"] scratchpad show
-bindsym $mod+Control+space [class="^kitty$"] scratchpad show
+bindsym $mod+Control+space [class="^contour$"] scratchpad show
 # bindsym $mod+Control+space [con_mark="0"] scratchpad show
 
 #auto workspace assignments
@@ -341,7 +341,7 @@ show_marks yes
 #send to scratchpad ('minimize')
 bindsym $super+m move scratchpad
 #show 1st scratchpad window
-bindsym $super+shift+m scratchpad show
+# bindsym $super+shift+m scratchpad show
 
 #gaps
 gaps inner $standard_gap

@@ -19,9 +19,9 @@ export FZF_DEFAULT_OPTS="
 --preview-window hidden
 --bind 'ctrl-y:execute-silent(printf {} | cut -f 2- | xclip -r -sel c)'
 --bind 'ctrl-p:toggle-preview'
---bind 'alt-l:clear-query'
---bind 'alt-c:clear-selection'
---bind 'alt-a:toggle-all'
+--bind 'ctrl-l:clear-query'
+--bind 'ctrl-s:clear-selection'
+--bind 'ctrl-a:toggle-all'
 "
 
 # Preview fzf file content using bat (https://github.com/sharkdp/bat)
@@ -129,9 +129,6 @@ source "$HOME/.cargo/env"
 # Bind ctrl-r but not up arrow
 #eval "$(atuin init bash --disable-up-arrow)"
 
-# Bind up-arrow but not ctrl-r
-eval "$(atuin init bash --disable-ctrl-r)"
-
 #cheat
 export CHEAT_USE_FZF=true
 
@@ -142,12 +139,15 @@ export CHEAT_USE_FZF=true
 
 eval "$(starship init bash)"
 
+# Bind up-arrow but not ctrl-r
+eval "$(atuin init bash --disable-ctrl-r)"
+
 #expose thefuck 'fuck' alias
 eval $(thefuck --alias)
 
 # added for npm-completion https://github.com/Jephuff/npm-bash-completion
-PATH_TO_NPM_COMPLETION="/usr/local/bin/../lib/node_modules/npm-completion"
-source $PATH_TO_NPM_COMPLETION/npm-completion.sh
+# PATH_TO_NPM_COMPLETION="/usr/local/bin/../lib/node_modules/npm-completion"
+# source $PATH_TO_NPM_COMPLETION/npm-completion.sh
 
 # enables and bootstraps nvm
 export NVM_DIR="$HOME/.nvm"
@@ -159,3 +159,4 @@ export NVM_DIR="$HOME/.nvm"
 # if command -v picom-trans &> /dev/null; then
 #   picom-trans -n "kitty" 92
 # fi
+

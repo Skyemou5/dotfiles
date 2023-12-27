@@ -2,7 +2,7 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: Material Design Icons, JetBrainsMono Nerd Font;
+  font-family: otf-font-awesome, ttf-font-awesome, "Font Awesome 5 Free", Material Design Icons, JetBrainsMono Nerd Font;
   font-size: 13px;
 }
 
@@ -49,7 +49,9 @@ window#waybar.hidden {
 
 #memory,
 #custom-power,
+#custom-audio_idle_inhibitor,
 #custom-chezcheck,
+#custom-wl-color-picker,
 #battery,
 #backlight,
 #pulseaudio,
@@ -69,6 +71,14 @@ window#waybar.hidden {
 
 #custom-chezcheck {
   background-color: #c08aff;
+}
+
+#custom-wl-color-picker {
+  background-color: #5b8eeb;
+}
+
+#custom-audio_idle_inhibitor {
+  background-color: #cf42be;
 }
 
 #custom-logo {
