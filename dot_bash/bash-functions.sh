@@ -14,6 +14,10 @@ function zero-terminated() {
     tr '\n' '\0'
 }
 
+function dfbtr() {
+    sudo btrfs filesystem usage $1 | bat --language bash
+}
+
 function extract-sentences() {
 	sd "\. " ".\n"
 }
