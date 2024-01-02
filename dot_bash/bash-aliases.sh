@@ -8,6 +8,7 @@ alias lock='swaylock -f -c 000000'
 alias screenlock='xdg-screensaver lock'
 #utility
 alias off='shutdown -h now'
+alias restart='shutdown -r now'
 alias zsh='SHELL=/usr/bin/zsh; zsh'
 alias p='pushd'
 alias l='clear'
