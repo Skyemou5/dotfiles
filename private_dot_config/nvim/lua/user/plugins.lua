@@ -1,13 +1,3 @@
-local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-parser_config.hypr = {
-  install_info = {
-    url = "https://github.com/luckasRanarison/tree-sitter-hypr",
-    files = { "src/parser.c" },
-    branch = "master",
-  },
-  filetype = "hypr",
-}
-
 -- provide plugin manager 'lazy'
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -40,26 +30,5 @@ require("lazy").setup({
   },
   "tpope/vim-surround",
   "farmergreg/vim-lastplace",
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    config = function () 
-      
-      local parser_install_dir = vim.fn.stdpath("cache") .. "/treesitters"
-      vim.fn.mkdir(parser_install_dir, "p")
-      -- Prevents reinstall of treesitter plugins every boot
-      vim.opt.runtimepath:append(parser_install_dir)
-
-      local configs = require("nvim-treesitter.configs")
-
-      configs.setup({
-          ensure_installed = {},
-          sync_install = false,
-          parser_install_dir = parser_install_dir,
-          highlight = { enable = true },
-          indent = { enable = true },  
-        })
-    end
-  },
   "luckasRanarison/tree-sitter-hypr",
 })
