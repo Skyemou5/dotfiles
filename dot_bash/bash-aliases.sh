@@ -1,3 +1,5 @@
+#arch
+alias pacfast='sudo pacman -S --needed --noconfirm'
 #debian
 alias update='sudo apt update && sudo apt upgrade -y'
 #gnome
